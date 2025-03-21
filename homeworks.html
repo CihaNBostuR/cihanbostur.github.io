@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homework</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleCode(id) {
+            var codeBlock = document.getElementById(id);
+            if (codeBlock.style.display === "none") {
+                codeBlock.style.display = "block";
+            } else {
+                codeBlock.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>My Homework</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="homeworks.html">My Homework</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>Homework List</h2>
+
+        <h3><a href="#" onclick="toggleCode('hw1-q2')">Homework 1 - Question 2 Code Error's Fixed</a></h3>
+        <pre id="hw1-q2" class="code-block" style="display: none;"><code>
+#include &lt;stdio.h&gt;
+
+/* function main begins program execution */
+int main(void) {
+   int integer1; /* first number to be input by user */
+   int integer2; /* second number to be input by user */
+   int sum;      /* variable in which sum will be stored */ 
+
+   printf("Enter first integer\n"); /* prompt */
+   scanf("%d", &integer1); /* read an integer */
+
+   printf("Enter second integer\n"); /* prompt */
+   scanf("%d", &integer2); /* read an integer */
+   
+   sum = integer1 + integer2; /* assign total to sum */
+
+   printf("Sum is %d\n", sum); /* print sum */
+   return 0; /* indicate that program ended successfully */
+}
+        </code></pre>
+
+        <h3><a href="#" onclick="toggleCode('hw1-q3')">Homework 1 - Question 3 House Price Prediction</a></h3>
+        <pre id="hw1-q3" class="code-block" style="display: none;"><code>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+/* function main begins program execution */
+int main(void) {
+    double homeValue, homeSize, homePopularity;
+    
+    printf("Please enter popularity\n");
+    scanf("%lf", &homePopularity);
+    
+    printf("Please enter home size\n");
+    scanf("%lf", &homeSize);
+    
+    homeValue = 10000 * ((pow(homeSize, 2) + (pow(homePopularity, 3))));
+    
+    printf("Satın almak istediğiniz evin tahmini değeri \n %lf", homeValue);
+} 
+        </code></pre>
+
+        <h3><a href="#" onclick="toggleCode('hw1-q4a')">Homework 1 - Question 4 Part A</a></h3>
+        <pre id="hw1-q4a" class="code-block" style="display: none;"><code>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int computeHomeValue(int popularity, int size);
+
+int main(void) {
+    int homeValue, size, popularity;
+    
+    printf("Please enter popularity\n");
+    scanf("%d", &popularity);
+    
+    printf("Please enter home size\n");
+    scanf("%d", &size);
+    
+    homeValue = computeHomeValue(popularity, size);
+    
+    printf("Satın almak istediğiniz evin tahmini değeri \n %d", homeValue);
+} 
+
+int computeHomeValue(int popularity, int size) {
+    int homeValue;
+    homeValue = 10000 * ((pow(size, 2) + (pow(popularity, 3))));
+    return(homeValue);
+}
+        </code></pre>
+
+        <h3><a href="#" onclick="toggleCode('hw1-q4b')">Homework 1 - Question 4 Part B</a></h3>
+        <pre id="hw1-q4b" class="code-block" style="display: none;"><code>
+            #include <stdio.h>
+                #include <math.h>
+                
+                void computeHomeValue (void);
+                
+                int main( void )
+                {
+                    computeHomeValue();
+                
+                } 
+                
+                void computeHomeValue (void) {
+                    
+                    double homeValue,homeSize,homePopularity;
+                    
+                    printf("Please enter popularity\n");
+                    scanf("%lf",&homePopularity);
+                    
+                    printf("Please enter home size\n");
+                    scanf("%lf",&homeSize);
+                    
+                    homeValue = 10000 * ((pow(homeSize,2) + (pow(homePopularity,3)))) ;
+                    
+                    printf("Satın almak istediğiniz evin tahmini değeri \n %lf", homeValue );
+                    
+                }
+                
+        </code></pre>
+
+    </section>
+
+    <footer>
+        <p>© 2025 Cihan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
